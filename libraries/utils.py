@@ -218,17 +218,17 @@ class AppManager:
                     self.paramMobileNetSSD)
 
             elif self.model == 'Darknet-YOLOv3':
-                self.paramYolo = dict(labels='models/DarkNet/coco.names',
-                                      modelCfg="models/DarkNet/yolov3.cfg",
-                                      modelWeights="models/DarkNet/yolov3.weights",
+                self.paramYolo = dict(labels='coco.names',
+                                      modelCfg="yolov3.cfg",
+                                      modelWeights="yolov3.weights",
                                       confThresh=self.guiParam['confThresh'],
                                       nmsThresh=self.guiParam['nmsThresh'])
 
                 self.objApp = plugins.Object_Detection_YOLO(self.paramYolo)
 
             elif self.model == 'Darknet-YOLOv3-tiny':
-                self.paramYoloTiny = dict(labels='models/DarkNet/coco.names',
-                                          modelCfg='models/DarkNet/yolov3-tiny.cfg',
+                self.paramYoloTiny = dict(labels='coco.names',
+                                          modelCfg='yolov3-tiny.cfg',
                                           modelWeights="models/DarkNet/yolov3-tiny.weights",
                                           confThresh=self.guiParam['confThresh'],
                                           nmsThresh=self.guiParam['nmsThresh'])
